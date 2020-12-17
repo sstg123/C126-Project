@@ -63,6 +63,33 @@ function draw() {
 	fill("#FF0000");
 	stroke("#FF0000");
 
+
+	if(scoreRightWrist > 0.2)
+	{ 
+		circle(rightWristX,rightWristY,20);
+
+			song2.stop();
+
+		if(song1_status == false)
+		{
+			song1.play();
+			document.getElementById("song").innerHTML = "Playing - Harry Potter Theme Song"
+		}
+	}
+
+	if(scoreLeftWrist > 0.2)
+	{
+		circle(leftWristX,leftWristY,20);
+
+			song1.stop();
+
+		if(song2_status == false)
+		{
+			song2.play();
+			document.getElementById("song").innerHTML = "Playing - Peter Pan Song"
+		}
+	}
+
 }
 
 function play()
